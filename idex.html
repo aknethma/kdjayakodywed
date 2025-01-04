@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KD Jayakody - Legendary Sri Lankan Musician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Removed the incorrect tailwind.min.js -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #4F46E5, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -37px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4F46E5;
+        }
+        
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: -31px;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background: #E5E7EB;
+        }
+    </style>
+</head>
+<!-- Rest of the HTML remains exactly the same -->
+<body class="bg-gray-50 font-['Poppins']">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-lg z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold gradient-text">KD Jayakody</h1>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+                    <a href="#journey" class="hover:text-indigo-600 transition-colors">Journey</a>
+                    <a href="#legacy" class="hover:text-indigo-600 transition-colors">Legacy</a>
+                    <a href="#achievements" class="hover:text-indigo-600 transition-colors">Achievements</a>
+                </div>
+                <button id="menuBtn" class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+        <div class="p-6">
+            <div class="flex justify-end">
+                <button id="closeMenu" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6 mt-8">
+                <a href="#about" class="text-lg hover:text-indigo-600 transition-colors">About</a>
+                <a href="#journey" class="text-lg hover:text-indigo-600 transition-colors">Journey</a>
+                <a href="#legacy" class="text-lg hover:text-indigo-600 transition-colors">Legacy</a>
+                <a href="#achievements" class="text-lg hover:text-indigo-600 transition-colors">Achievements</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text">KD Jayakody</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12">A Legendary Figure in Sri Lankan Music</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">Birth</h3>
+                    <p class="text-gray-600">November 24, 1926</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">Legacy</h3>
+                    <p class="text-gray-600">1950 - 2014</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mb-2">Expertise</h3>
+                    <p class="text-gray-600">Folk & Classical Music</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About the Legend</h2>
+            <div class="max-w-3xl mx-auto">
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Kandiah Duraiswamy Jayakody was one of the most revered figures in the history of Sri Lankan music. Born in Udugama, his artistic journey began at a young age, influenced by his father, M. Duraiswamy, a renowned musician.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    His unique ability to merge classical and folk traditions, combined with his rich, emotional voice, made him a cornerstone of Sri Lankan musical heritage. His contributions span across traditional music, film soundtracks, and cultural preservation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Musical Journey</h2>
+            <div class="max-w-3xl mx-auto relative">
+                <div class="timeline-line">
+                    <div class="ml-12 mb-12 relative timeline-dot">
+                        <h3 class="text-xl font-semibold mb-2">Early Years</h3>
+                        <p class="text-gray-600">Learned tabla and trained under prominent gurus in Sri Lanka</p>
+                    </div>
+                    <div class="ml-12 mb-12 relative timeline-dot">
+                        <h3 class="text-xl font-semibold mb-2">1950s</h3>
+                        <p class="text-gray-600">Began performing at local events and classical music concerts</p>
+                    </div>
+                    <div class="ml-12 mb-12 relative timeline-dot">
+                        <h3 class="text-xl font-semibold mb-2">1960s-1970s</h3>
+                        <p class="text-gray-600">Became an iconic voice in the Sinhala film industry</p>
+                    </div>
+                    <div class="ml-12 relative timeline-dot">
+                        <h3 class="text-xl font-semibold mb-2">Later Years</h3>
+                        <p class="text-gray-600">Continued performing and inspiring generations until 2014</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legacy" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Enduring Legacy</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Cultural Ambassador</h3>
+                    <p class="text-gray-600">Preserved and promoted Sri Lankan musical heritage</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Musical Innovation</h3>
+                    <p class="text-gray-600">Bridged classical and folk music traditions</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-4">Influence</h3>
+                    <p class="text-gray-600">Inspired generations of Sri Lankan musicians</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Notable Achievements</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">Sihina Ahase (1968)</h3>
+                    <p class="text-gray-600">Iconic film song that became a classic in Sri Lankan cinema</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">Musical Fusion</h3>
+                    <p class="text-gray-600">Successfully merged Indian, Malay, and Portuguese elements in his music</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-2">Cultural Preservation</h3>
+                    <p class="text-gray-600">Maintained the integrity of Sri Lankan traditional music</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">In Memory of KD Jayakody (1926-2014)</p>
+            <p class="text-gray-400">A voice that continues to echo through generations</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menuBtn');
+        const closeMenu = document.getElementById('closeMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        Array.from(mobileMenuLinks).forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll reveal animation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight * 0.75) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize sections with initial state
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+        });
+    </script>
+</body>
+</html>
